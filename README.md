@@ -32,10 +32,8 @@ DisableClick = function( options ) {
     }
     this.setDisableClick = function() {
         $(this.targetSelector).addClass('not-clickable');
-        $(this.callToActionSelector).attr('disabled', 'disabled');
     };
-    this.setEnableClick = function(){
-        $(this.callToActionSelector).removeAttr('disabled');
+    this.setEnableClick = function() {
         $(this.targetSelector).removeClass('not-clickable')
     };
     this.callToActionOnClick();
