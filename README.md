@@ -1,6 +1,10 @@
 # disableClick
-Deshabilitar/habilitar elementos luego de un click en un *call to action* usando jQuery
+**Deshabilitar/habilitar elementos luego de un click en un *call to action* usando jQuery**
 
+El objetivo de **disableClicks** es solucionar el comportamiento inapropiado al guardar formularios en algunos navegadores (como Google Chrome) o en conexiones a Internet lentas.
+En esas condiciones, cuando el usuario final presiona múltiples veces sobre un botón de submit (u otro call to action), se gauarban multiples registros de los datos del formulario en la base de datos. 
+
+## srtyles.css ##
 Este es el css que evita los clicks sobre un elemento
 
 ```css
@@ -9,8 +13,8 @@ Este es el css que evita los clicks sobre un elemento
     cursor: default;
 }
 ```
-
-A continuación el objeto que se usa para manejar los clicks y deshabilitar un determinado elemento después de un click
+## disableClicks.js ##
+El objeto DisableClick se usa para manejar los clicks y deshabilitar un determinado elemento después de un click
 
 ```javascript
 /** * Habilita/deshabilita elementos en función de un click en un 'call to action'.
@@ -44,7 +48,7 @@ A continuación un ejemplo de implementación
 <!DOCTYPE html>
 <head>
     <title>Titulo</title>
-    <link rel="stylesheet" href="archivo-con-los-estilos-para deshabilitar-los-clicks.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <form id="formulario"
@@ -66,7 +70,8 @@ A continuación un ejemplo de implementación
         </button>
     </form>
 
-    <script src="jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/disableClicks.js"></script>
     <script>
         $('document').ready(function () {
             var options = {
