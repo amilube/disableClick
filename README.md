@@ -76,7 +76,7 @@ A continuación un ejemplo de implementación
                 callToActionSelector: "#guardar",
                 targetSelector: "#formulario"
             }
-            disableClick = DisableClick(options);
+            disableClick = new DisableClick(options);
             if (condicion_para_habilitar_de_nuevo_el_click) {
                 disableClick.setEnableClick();
             }
