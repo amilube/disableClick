@@ -69,7 +69,7 @@ A continuación un ejemplo de implementación
     </form>
 
     <script src="js/jquery.js"></script>
-    <script src="js/disableClicks.js"></script>
+    <script src="js/DisableClicks.js"></script>
     <script>
         $('document').ready(function () {
             var options = {
